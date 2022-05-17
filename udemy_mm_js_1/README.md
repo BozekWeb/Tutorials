@@ -11,5 +11,5 @@ As part of the course, I have completed 8 projects*:
 7. ToDo List
 8. Weather application
 
-Some of the projects were done 1:1 according to the tutorial, and partly I added some smaller features as part of the self exercise.
+*Some of the projects were done 1:1 according to the tutorial, and partly I added some smaller features as part of the self exercise.
 
