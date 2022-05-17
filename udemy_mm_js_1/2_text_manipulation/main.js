@@ -22,7 +22,7 @@ const randomColor = () => {
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
 
-    text.style.color = `rgb(${r}, ${g}, ${b})`
+    text.style.color = `rgb(${r}, ${g}, ${b})`;
 }
 
 

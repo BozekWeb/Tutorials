@@ -9,7 +9,7 @@ const handleNav = () => {
     burgerBtn.classList.toggle('active');
     barsIco.classList.toggle('hide');
     xIco.classList.toggle('hide');
-}
+};
 
 
 burgerBtn.addEventListener('click', handleNav);
