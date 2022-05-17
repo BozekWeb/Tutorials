@@ -17,39 +17,39 @@ nav ul {
 	height: 100vh;
 	width: 350px;
 	left: -350px;
-    list-style: none;    
+	list-style: none;
 	background-color: rgb(255, 255, 255);
-	transition: transform .3s;
+	transition: transform 0.3s;
 }
 
 nav a {
-    display: block;
-    padding: 10px 30px;
-    color: #333;
-    text-decoration: none;    
+	display: block;
+	padding: 10px 30px;
+	color: #333;
+	text-decoration: none;
 }
 
 nav a:hover {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .burger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
-    font-size: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-	transition: transform .3s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 20px;
+	font-size: 36px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	transition: transform 0.3s;
 }
 
 .active {
-    transform: translateX(350px)
+	transform: translateX(350px);
 }
 
 .hide {
-    display: none;
+	display: none;
 }

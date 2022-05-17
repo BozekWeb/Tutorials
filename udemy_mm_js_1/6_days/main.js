@@ -1,5 +1,5 @@
-const currentDay = document.querySelector('.current-day');
-const funFact = document.querySelector('.fun-fact');
+const currentDay = document.querySelector('.current-day')
+const funFact = document.querySelector('.fun-fact')
 
 const facts = [
 	'Krokodyl nie potrafi wystawić języka.',
@@ -9,15 +9,15 @@ const facts = [
 	'Goryle śpią nawet czternaście godzin dziennie.',
 	'Język kameleona jest dwukrotnie dłuższy od jego ciała.',
 	'Chińczycy w ciągu roku zużywają około 80 miliardów pałeczek.',
-	'Żeby wejść na Wieżę Eiffla trzeba pokonać aż 1710 stopni.'
-];
+	'Żeby wejść na Wieżę Eiffla trzeba pokonać aż 1710 stopni.',
+]
 
-const day = new Date();
-currentDay.textContent = day.toLocaleString('default', {weekday: "long"});
+const day = new Date()
+currentDay.textContent = day.toLocaleString('default', { weekday: 'long' })
 
 const randomTrivia = () => {
-	const rand = Math.floor(Math.random() * facts.length);
-	funFact.textContent = facts[rand];
+	const rand = Math.floor(Math.random() * facts.length)
+	funFact.textContent = facts[rand]
 }
 
-randomTrivia();
+randomTrivia()
