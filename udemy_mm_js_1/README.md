@@ -1,6 +1,8 @@
 # "[2022] JavaScript - Jedyny Kurs, Którego Potrzebujesz"
 A extensive JavaScript course, covering the basics of the language, as well as more advanced topics such as: DOM manipulation, objects and using the API.
 
+There is a [link](https://www.udemy.com/course/javascript-jedyny-kurs-ktorego-potrzebujesz/) to the course.
+
 As part of the course, I have completed 8 projects*:
 1. Image manipulation
 2. Text manipulation
