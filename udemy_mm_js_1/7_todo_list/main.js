@@ -22,7 +22,6 @@ const prepareDOMElements = () => {
 	addBtn = document.querySelector('.btn-add')
 	ulList = document.querySelector('.todolist ul')
 	popup = document.querySelector('.popup')
-	todoToEdit = document.querySelector('.poput')
 	popupInfo = document.querySelector('.popup-info')
 	popupInput = document.querySelector('.popup-input')
 	popupAddBtn = document.querySelector('.accept')
