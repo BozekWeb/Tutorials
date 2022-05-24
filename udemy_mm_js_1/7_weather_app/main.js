@@ -14,7 +14,7 @@ const API_UNITS = '&units=metric'
 const getWeather = () => {
 	const city = input.value.replace(/ /g, '%20')
 
-	const URL = API_LINK + 'jelenia góra' + API_KEY + API_UNITS
+	const URL = API_LINK + city + API_KEY + API_UNITS
 	console.log(URL)
 
 	axios
