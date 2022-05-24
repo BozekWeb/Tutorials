@@ -11,7 +11,7 @@ const splitBill = () => {
 		err.textContent = 'Uzupełnij wszystkie pola!'
 		costInfo.style.display = 'none'
 	} else {
-		err.style.textContent = ''
+		err.textContent = ''
 		countBill()
 	}
 }
