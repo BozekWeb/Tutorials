@@ -1,41 +1,121 @@
-let $todoInput; // miejsce, gdzie użytkownik wpisuje treść
-let $alertInfo; // info o braku zadań / konieczności dodania tekstu
-let $addBtn; // przycisk ADD - dodaje nowe elementy do listy
-let $ulList; // nasza lista zadań, tagi <ul></ul>
-let $newTask; // nowo dodany LI, nowe zadanie
-let $allTasks; // lista wszystkich dodanych LI
-let $idNumber = 0; // ID dodawane do każdego nowego zadania
-let $popup; //pobrany popup
-let $popupInfo; // alert w popupie, jak się doda pusty tekst
-let $editedTodo; // edytowany Todo
-let $popupInput; //tekst wpisywany w inputa w popup'ie
-let $addPopupBtn; // przycisk "zatwierdź" w popup'ie
-let $closeTodoBtn //przycisk od zamykania popup'a
+let todoInput
+let addBtn
+let errInfo
+let ulList
+
+//Popup
+let popup
+let popupInfo
+let todoToEdit
+let popupInput
+let popupAddBtn
+let popupCloseBtn
 
 const main = () => {
-    prepareDOMElements();
-    prepareDOMEvents();
+	prepareDOMElements()
+	prepareDOMEvents()
 }
 
 const prepareDOMElements = () => {
-    $todoInput = document.querySelector('.todo-input');
-    $alertInfo = document.querySelector('.alert-info');
-    $addBtn = document.querySelector('.add-btn');
-    $ulList = document.querySelector('.todo-list ul');
-    $allTasks = document.getElementsByTagName('li');
-    $popup = document.querySelector('.popup');
-    $popupInfo = document.querySelector('.popup-info');
-    $popupInput = document.querySelector('.popup-input');
-    $addPopupBtn = document.querySelector('.accept');
-    $closeTodoBtn = document.querySelector('.cancel');
+	todoInput = document.querySelector('.todo-input')
+	errInfo = document.querySelector('.error-info')
+	addBtn = document.querySelector('.btn-add')
+	ulList = document.querySelector('.todolist ul')
+	popup = document.querySelector('.popup')
+	popupInfo = document.querySelector('.popup-info')
+	popupInput = document.querySelector('.popup-input')
+	popupAddBtn = document.querySelector('.accept')
+	popupCloseBtn = document.querySelector('.cancel')
 }
 
 const prepareDOMEvents = () => {
-    $addBtn.addEventListener('click', addNewTask);
+	addBtn.addEventListener('click', addNewTask)
+	ulList.addEventListener('click', checkClick)
+	popupCloseBtn.addEventListener('click', closePopup)
+	popupAddBtn.addEventListener('click', changeTodoText)
+	todoInput.addEventListener('keyup', enterKeyCheck)
 }
 
 const addNewTask = () => {
-    console.log('ok');
+	if (todoInput.value !== '') {
+		const newTodo = document.createElement('li')
+		newTodo.textContent = todoInput.value
+		ulList.append(newTodo)
+
+		addTools(newTodo)
+
+		todoInput.value = ''
+		errInfo.textContent = ''
+	} else {
+		errInfo.textContent = 'Wpisz treść zadania!'
+	}
 }
 
-document.addEventListener('DOMContentLoaded', main);
+const addTools = newTodo => {
+	const toolsPanel = document.createElement('div')
+	toolsPanel.classList.add('tools')
+	newTodo.append(toolsPanel)
+
+	const completeBtn = document.createElement('button')
+	completeBtn.classList.add('complete')
+	completeBtn.innerHTML = '<i class="fas fa-check"></i>'
+
+	const editBtn = document.createElement('button')
+	editBtn.classList.add('edit')
+	editBtn.textContent = 'EDIT'
+
+	const deleteBtn = document.createElement('button')
+	deleteBtn.classList.add('delete')
+	deleteBtn.innerHTML = '<i class="fas fa-times"></i>'
+
+	toolsPanel.append(completeBtn, editBtn, deleteBtn)
+}
+
+const checkClick = e => {
+	if (e.target.matches('.complete')) {
+		e.target.closest('li').classList.toggle('completed')
+		e.target.classList.toggle('completed')
+	} else if (e.target.matches('.edit')) {
+		editTodo(e)
+	} else if (e.target.matches('.delete')) {
+		deleteTodo(e)
+	}
+}
+
+const editTodo = e => {
+	todoToEdit = e.target.closest('li')
+	popupInput.value = todoToEdit.firstChild.textContent
+	popup.style.display = 'flex'
+}
+
+const closePopup = () => {
+	popup.style.display = 'none'
+	popupInfo.textContent = ''
+}
+
+const changeTodoText = () => {
+	if (popupInput.value !== '') {
+		todoToEdit.firstChild.textContent = popupInput.value
+		popup.style.display = 'none'
+	} else {
+		popupInfo.textContent = 'Musisz podać jakiś tekst!'
+	}
+}
+
+const deleteTodo = e => {
+	e.target.closest('li').remove()
+
+	const allTodos = document.querySelectorAll('li')
+
+	if (allTodos.length === 0) {
+		errInfo.textContent = 'Brak zadań na liście'
+	}
+}
+
+const enterKeyCheck = e => {
+	if (e.key === 'Enter') {
+		addNewTask()
+	}
+}
+
+document.addEventListener('DOMContentLoaded', main)
