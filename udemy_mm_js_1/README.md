@@ -1,4 +1,8 @@
 # "[2022] JavaScript - Jedyny Kurs, Którego Potrzebujesz"
+
+Platform: Udemy
+Author: Mateusz Maj
+
 A extensive JavaScript course, covering the basics of the language, as well as more advanced topics such as: DOM manipulation, objects and using the API.
 
 There is a [link](https://www.udemy.com/course/javascript-jedyny-kurs-ktorego-potrzebujesz/) to the course.
