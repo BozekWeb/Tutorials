@@ -1,7 +1,7 @@
 # "Modern HTML & CSS From The Beginning (Including Sass)"
 
 Platform: Udemy  
-Author: Brad Hussey
+Author: Brad Traversy
 
 A course with extensive knowledge of HTML and CSS. During the course, we learn about flex, grid and sass
 
