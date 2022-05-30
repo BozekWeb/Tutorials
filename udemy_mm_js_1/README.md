@@ -1,13 +1,14 @@
 # "[2022] JavaScript - Jedyny Kurs, Którego Potrzebujesz"
 
-Platform: Udemy
+Platform: Udemy  
 Author: Mateusz Maj
 
 A extensive JavaScript course, covering the basics of the language, as well as more advanced topics such as: DOM manipulation, objects and using the API.
 
 There is a [link](https://www.udemy.com/course/javascript-jedyny-kurs-ktorego-potrzebujesz/) to the course.
 
-As part of the course, I have completed 8 projects*:
+As part of the course, I have completed 8 projects\*:
+
 1. Image manipulation
 2. Text manipulation
 3. RegExp and password validation
@@ -17,5 +18,4 @@ As part of the course, I have completed 8 projects*:
 7. ToDo List
 8. Weather application
 
-*Some of the projects were done 1:1 according to the tutorial, and partly I added some smaller features as part of the self exercise.
-
+\*Some of the projects were done 1:1 according to the tutorial, and partly I added some smaller features as part of the self exercise.

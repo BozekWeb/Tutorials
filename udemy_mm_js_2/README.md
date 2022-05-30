@@ -1,7 +1,7 @@
 # "[2022] 10 projektów w czystym JavaScript"
 
-Platform: Udemy
-Author: Mateusz Maj
+Platform: Udemy   
+Author: Mateusz Maj  
 
 A course in which I made 10 more or less advanced projects using JavaScript.
 
