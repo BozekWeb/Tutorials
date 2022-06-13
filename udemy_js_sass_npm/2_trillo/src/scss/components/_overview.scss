@@ -1,0 +1,80 @@
+@use '../abstracts/abs-index' as abs;
+
+.overview {
+	display: flex;
+	align-items: center;
+	border-bottom: var(--line);
+
+	flex: 1;
+
+	&__heading {
+		font-size: 2.25rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 1.5rem 3rem;
+
+		@media only screen and (max-width: abs.$bp-small) {
+			font-size: 1.8rem;
+			padding: 1.25rem 2rem;
+		}
+	}
+
+	&__stars {
+		margin-right: auto;
+		display: flex;
+	}
+
+	&__icon-star,
+	&__icon-location {
+		width: 1.75rem;
+		height: 1.75rem;
+		fill: var(--color-primary);
+	}
+
+	&__location {
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+	}
+
+	&__icon-location {
+		margin-right: 0.5rem;
+	}
+
+	&__rating {
+		background-color: var(--color-primary);
+		margin-left: 3rem;
+		color: var(--color-white);
+		padding: 0 2.25rem;
+		align-self: stretch;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		@media only screen and (max-width: abs.$bp-small) {
+			padding: 0 1.5rem;
+		}
+	}
+
+	&__rating-average {
+		font-size: 2.25rem;
+		font-weight: 300;
+		margin-bottom: -3px;
+
+		@media only screen and (max-width: abs.$bp-small) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&__rating-count {
+		font-size: 0.8;
+		text-transform: uppercase;
+
+		@media only screen and (max-width: abs.$bp-small) {
+			font-size: 0.5rem;
+		}
+	}
+}
