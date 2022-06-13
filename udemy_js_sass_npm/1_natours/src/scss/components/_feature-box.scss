@@ -1,0 +1,33 @@
+@use '../abstracts/abs-index' as abs;
+
+.feature-box {
+	background-color: rgba(abs.$color-white, 0.8);
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba(abs.$color-black, 0.15);
+	transition: transform 0.3s;
+
+	@include abs.respond(tab-port) {
+		padding: 2rem;
+	}
+
+	&__icon {
+		font-size: 6rem;
+		margin-bottom: 0.5rem;
+		display: inline-block;
+		background-image: linear-gradient(to right, abs.$color-primary-light, abs.$color-primary-dark);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+
+		@include abs.respond(tab-port) {
+			margin-bottom: 0;
+		}
+	}
+
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+}
