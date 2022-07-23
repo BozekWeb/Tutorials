@@ -21,7 +21,7 @@ const Todo = props => {
 					Delete
 				</button>
 			</div>
-			{modalIsOpen && <Modal onCancel={closeModalHandler} />}
+			{modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />}
 			{modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
 		</div>
 	)

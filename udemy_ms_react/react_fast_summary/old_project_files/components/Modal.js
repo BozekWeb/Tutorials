@@ -6,7 +6,7 @@ const Modal = props => {
 
 	const confirmHandler = () => {
 		console.log('confirmBtn')
-		props.onCancel()
+		props.onConfirm()
 	}
 
 	return (
